@@ -33,3 +33,13 @@ function updateClockHandRotations() {
 }
 
 setInterval(() => updateClockHandRotations(), 1000);
+
+/* === Disable transition after initial transition === */
+function disableTransition() {
+    setTimeout(() => {
+        secondHand.style.transitionProperty = "none";
+        minuteHand.style.transitionProperty = "none";
+        hourHand.style.transitionProperty = "none";
+    }, 1500);
+}
+disableTransition();
