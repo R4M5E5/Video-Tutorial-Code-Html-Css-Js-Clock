@@ -32,4 +32,4 @@ function updateClockHandRotations() {
     setRotationInTurns(hourHand, hourHandTurns);
 }
 
-updateClockHandRotations();
+setInterval(() => updateClockHandRotations(), 1000);
