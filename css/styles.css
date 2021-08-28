@@ -21,4 +21,6 @@ body {
     position: absolute;
     top: 0;
     bottom: 0;
+    transition-property: all;
+    transition-duration: 500ms;
 }
