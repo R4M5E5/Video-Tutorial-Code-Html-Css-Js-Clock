@@ -12,6 +12,15 @@ function setRotationInTurns(domNode, turns) {
     style.transform = transform;
 }
 
+function computeClockHandRotationsInTurns() {
+    const date = new Date();
+    return {
+        secondHandTurns: date.getSeconds() / 60,
+        minuteHandTurns: date.getMinutes() / 60,
+        hourHandTurns: date.getHours() / 12,
+    };
+}
+
 setRotationInTurns(secondHand, 0.25);
 setRotationInTurns(minuteHand, 0.5);
 setRotationInTurns(hourHand, 0.75);
