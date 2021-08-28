@@ -21,6 +21,15 @@ function computeClockHandRotationsInTurns() {
     };
 }
 
-setRotationInTurns(secondHand, 0.25);
-setRotationInTurns(minuteHand, 0.5);
-setRotationInTurns(hourHand, 0.75);
+function updateClockHandRotations() {
+    const {
+        secondHandTurns,
+        minuteHandTurns,
+        hourHandTurns
+    } = computeClockHandRotationsInTurns();
+    setRotationInTurns(secondHand, secondHandTurns);
+    setRotationInTurns(minuteHand, minuteHandTurns);
+    setRotationInTurns(hourHand, hourHandTurns);
+}
+
+updateClockHandRotations();
