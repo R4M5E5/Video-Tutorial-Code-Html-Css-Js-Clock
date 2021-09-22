@@ -17,7 +17,7 @@ function computeClockHandRotationsInTurns() {
     return {
         secondHandTurns: date.getSeconds() / 60,
         minuteHandTurns: date.getMinutes() / 60,
-        hourHandTurns: date.getHours() / 12,
+        hourHandTurns: (date.getHours() + date.getMinutes()/60) / 12,
     };
 }
 
